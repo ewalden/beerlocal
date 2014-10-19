@@ -21,8 +21,12 @@ $sql = "SELECT * FROM brewery";
 $result = $db->query($sql);
 
 //display information:
-
 while($row = mysqli_fetch_array($result)) {
-    echo $row["br_breweryid"] . " - " . $row["br_name"] . "<br>";
+    $id = $row["br_breweryid"];
+    $breweryName = $row["br_name"];
+
+    $outputLine = $id . " - " . $breweryName . "<br>";
+
+    echo $outputLine;
 }
 
